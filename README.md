@@ -63,36 +63,36 @@ After you're finished please remove all the comments and instructions!
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [your_project_name] <a name="about-project"></a>
+# 📖 [Veterinary Clinic] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
 
-**[your_project__name]** is a...
+**[Veterinary Clinic]** is a database of animals with some querries to get specifics animals datas
 
 ## 🛠 Built With <a name="built-with"></a>
 
 ### Tech Stack <a name="tech-stack"></a>
 
-> Describe the tech stack and include only the relevant sections that apply to your project.
+> This project is built using Sql syntax and Postgresql for database hosting and deployment.
 
-<details>
+<!-- <details>
   <summary>Client</summary>
   <ul>
     <li><a href="https://reactjs.org/">React.js</a></li>
   </ul>
-</details>
+</details> -->
 
 <details>
   <summary>Server</summary>
   <ul>
-    <li><a href="https://expressjs.com/">Express.js</a></li>
+    <li><a href="https://www.enterprisedb.com/products-services-training/pgdownload">Postgresql Client for Windows</a></li>
   </ul>
 </details>
 
 <details>
 <summary>Database</summary>
   <ul>
-    <li><a href="https://www.postgresql.org/">PostgreSQL</a></li>
+    <li><a href="https://www.enterprisedb.com/products-services-training/pgdownload">PostgreSQL</a></li>
   </ul>
 </details>
 
@@ -102,9 +102,9 @@ After you're finished please remove all the comments and instructions!
 
 > Describe between 1-3 key features of the application.
 
-- **[key_feature_1]**
-- **[key_feature_2]**
-- **[key_feature_3]**
+- **[Animals table]**
+- **[Requests to fill Animals table with datas]**
+- **[Querries to get animals statistics]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -112,50 +112,42 @@ After you're finished please remove all the comments and instructions!
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-> Add a link to your deployed project.
+<!-- > Add a link to your deployed project.
 
 - [Live Demo Link](<replace-with-your-deployment-URL>)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- GETTING STARTED -->
 
 ## 💻 Getting Started <a name="getting-started"></a>
 
-> Describe how a new developer could make use of your project.
+> This projects provides basic structure to manage and store datas about animals. Querries can be use for specific statistics. The data model is extensible.
 
 To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-In order to run this project you need:
-
-<!--
-Example command:
+In order to run this project you need: 
 
 ```sh
- gem install rails
+  Postgresql Client for windows installed
 ```
- -->
 
 ### Setup
 
 Clone this repository to your desired folder:
 
-<!--
-Example commands:
-
 ```sh
   cd my-folder
-  git clone git@github.com:myaccount/my-project.git
+  git clone git@github.com:patriciachrysy/vet-clinic-database.git
 ```
---->
 
-### Install
+<!--### Install
 
 Install this project with:
 
-<!--
+
 Example command:
 
 ```sh
@@ -168,19 +160,15 @@ Example command:
 
 To run the project, execute the following command:
 
-<!--
-Example command:
-
 ```sh
-  rails server
+  psql -U postgres
 ```
---->
-
-### Run tests
+Then copy and paste the content of schema.sql, data.sql and queries.sql in this order.
+<!--### Run tests
 
 To run tests, run the following command:
 
-<!--
+
 Example command:
 
 ```sh
@@ -188,11 +176,11 @@ Example command:
 ```
 --->
 
-### Deployment
+
+<!--### Deployment
 
 You can deploy this project using:
 
-<!--
 Example:
 
 ```sh
@@ -206,7 +194,7 @@ Example:
 
 ## 👥 Authors <a name="authors"></a>
 
-> Mention all of the collaborators of this project.
+> These are the people who worked on this project.
 
 👤 **Manezeu Patricia**
 
@@ -217,7 +205,7 @@ Example:
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- FUTURE FEATURES -->
+<!-- FUTURE FEATURES
 
 ## 🔭 Future Features <a name="future-features"></a>
 
@@ -227,7 +215,7 @@ Example:
 - [ ] **[new_feature_2]**
 - [ ] **[new_feature_3]**
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#readme-top">back to top</a>)</p> -->
 
 <!-- CONTRIBUTING -->
 
@@ -255,7 +243,7 @@ If you like this project...
 
 > Give credit to everyone who inspired your codebase.
 
-I would like to thank...
+I would like to thank Microverse for providing the materials for this project.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -265,13 +253,13 @@ I would like to thank...
 
 > Add at least 2 questions new developers would ask when they decide to use your project.
 
-- **[Question_1]**
+- **[How can i learn how to write queries?]**
 
-  - [Answer_1]
+  - [Use the materials on the Tutorials points website]
 
-- **[Question_2]**
+- **[How can i add more colums to animal table]**
 
-  - [Answer_2]
+  - [After reading the materials and learning how to write queries, update the schema.sql file to add the desired columns]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
