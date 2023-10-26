@@ -53,3 +53,12 @@ SELECT animals.name FROM animals INNER JOIN owners ON animals.owner_id = owners.
 SELECT owners.full_name, COUNT(*) AS animal_count FROM owners LEFT JOIN animals ON animals.owner_id = owners.id GROUP BY owners.full_name ORDER BY animal_count DESC LIMIT 1;
 
 
+SELECT animals.name FROM animals INNER JOIN visits ON animals.id = visits.animal_id INNER JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'William Tatcher' ORDER BY visits.date_of_visit DESC LIMIT 1;
+SELECT COUNT(DISTINCT animal_id) AS num_animals FROM visits WHERE vet_id = 3;
+SELECT vets.name, ARRAY_TO_STRING(ARRAY_AGG(species.name), ', ') AS specialties FROM vets LEFT JOIN specializations ON vets.id = specializations.vet_id LEFT JOIN species ON specializations.species_id = species.id GROUP BY vets.name;
+SELECT animals.name FROM animals INNER JOIN visits ON animals.id = visits.animal_id WHERE visits.vet_id = 3 AND visits.date_of_visit BETWEEN '2020-04-01' AND '2020-08-30';
+SELECT animals.name, COUNT(visits.animal_id) AS num_visits FROM animals INNER JOIN visits ON animals.id = visits.animal_id GROUP BY animals.name ORDER BY num_visits DESC LIMIT 1;
+SELECT animals.name FROM animals INNER JOIN visits ON animals.id = visits.animal_id INNER JOIN vets ON visits.vet_id = vets.id WHERE vets.name = 'Maisy Smith' ORDER BY visits.date_of_visit ASC LIMIT 1;
+SELECT animals.name, vets.name, visits.date_of_visit FROM animals INNER JOIN visits ON animals.id = visits.animal_id INNER JOIN vets ON visits.vet_id = vets.id ORDER BY visits.date_of_visit DESC LIMIT 1;
+SELECT COUNT(*) AS num_visits FROM visits WHERE NOT EXISTS (SELECT * FROM specializations WHERE specializations.vet_id = visits.vet_id AND specializations.species_id = visits.animal_id);
+SELECT s.name AS recommended_specialty FROM species s JOIN (SELECT a.species_id, COUNT(*) AS visit_count FROM visits v JOIN vets vet ON v.vet_id = vet.id JOIN animals a ON v.animal_id = a.id JOIN owners o ON a.owner_id = o.id WHERE vet.name = 'Maisy Smith' GROUP BY a.species_id ORDER BY visit_count DESC LIMIT 1) most_visited_species ON s.id = most_visited_species.species_id;
