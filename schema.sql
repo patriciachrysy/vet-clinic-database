@@ -29,3 +29,7 @@ CREATE TABLE visits (animal_id INT NOT NULL, vet_id INT NOT NULL, date_of_visit 
 ALTER TABLE owners ADD COLUMN email VARCHAR(120);
 
 create index idx_animal_id on visits(animal_id);
+
+create index idx_vet_id on visits(vet_id);
+
+create index idx_email on owners(email);
